@@ -1,4 +1,3 @@
 # MMS QR code generator for latex
 
-
-![sample](sample.png)
+<img src="sample.png" alt="drawing" width="30%"/>
