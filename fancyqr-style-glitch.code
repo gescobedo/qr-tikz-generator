@@ -1,0 +1,54 @@
+% style `glitch': jagged shards that merge into their neighbours, with two
+% displaced ghosts behind them; tunables \fancyqr@glitch@tear,
+% \fancyqr@glitch@radius, \fancyqr@glitch@spread, \fancyqr@glitch@bleed,
+% \fancyqr@glitch@detach, \fancyqr@glitch@gap, \fancyqr@glitch@ghost
+\@ifundefined{fancyqr@glitch@tear}{\def\fancyqr@glitch@tear{.26}}{}%
+\@ifundefined{fancyqr@glitch@radius}{\def\fancyqr@glitch@radius{.44}}{}%
+\@ifundefined{fancyqr@glitch@spread}{\def\fancyqr@glitch@spread{.34}}{}%
+\@ifundefined{fancyqr@glitch@bleed}{\def\fancyqr@glitch@bleed{.34}}{}%
+\@ifundefined{fancyqr@glitch@detach}{\def\fancyqr@glitch@detach{.3}}{}%
+\@ifundefined{fancyqr@glitch@gap}{\def\fancyqr@glitch@gap{.06}}{}%
+\@ifundefined{fancyqr@glitch@ghost}{\def\fancyqr@glitch@ghost{26}}{}%
+% how far the shard reaches towards a neighbour: the full bleed, or a gap if
+% this side tore off
+\def\fancyqr@glitch@reach#1#2{%
+\edef#1{\fpeval{#2=0 ? 0 : (rand()<\fancyqr@glitch@detach
+   ? -\fancyqr@glitch@gap : \fancyqr@glitch@bleed)}}%
+}%
+% the directions of the eight vertices, computed once
+\@tempcnta=\z@
+\loop
+   \expandafter\edef\csname fancyqr@glitch@cos\the\@tempcnta\endcsname{\fpeval{cosd(\@tempcnta)}}%
+   \expandafter\edef\csname fancyqr@glitch@sin\the\@tempcnta\endcsname{\fpeval{sind(\@tempcnta)}}%
+   \advance\@tempcnta by 45
+\ifnum\@tempcnta<360\relax\repeat
+\def\fancyqr@glitch@vertex{%
+\edef\@fq@r{\fpeval{\fancyqr@glitch@radius+\fancyqr@glitch@spread*rand()}}%
+\edef\@fq@x{\fpeval{.5+\@fq@r*\csname fancyqr@glitch@cos\the\@tempcnta\endcsname}}%
+\edef\@fq@y{\fpeval{.5+\@fq@r*\csname fancyqr@glitch@sin\the\@tempcnta\endcsname}}%
+\edef\@fq@x{\fpeval{\@fq@x+(\@fq@x>.5 ? \fancyqr@glitch@rr : -\fancyqr@glitch@rl)}}%
+\edef\@fq@y{\fpeval{\@fq@y+(\@fq@y>.5 ? \fancyqr@glitch@ru : -\fancyqr@glitch@rd)}}%
+}%
+\def\fancyqr@glitch@shard#1#2#3#4{%
+\roundjoin\roundcap
+\fancyqr@glitch@reach\fancyqr@glitch@ru{#1}\fancyqr@glitch@reach\fancyqr@glitch@rl{#2}%
+\fancyqr@glitch@reach\fancyqr@glitch@rr{#3}\fancyqr@glitch@reach\fancyqr@glitch@rd{#4}%
+\@tempcnta=\z@ \fancyqr@glitch@vertex
+\moveto(\@fq@x,\@fq@y)%
+\loop\advance\@tempcnta by 45
+   \ifnum\@tempcnta<360\relax \fancyqr@glitch@vertex\lineto(\@fq@x,\@fq@y)\fi
+\ifnum\@tempcnta<360\relax\repeat
+\closepath\fillpath
+}%
+\def\fancyqr@glitch@ghosttile#1#2#3#4#5#6{%
+\put(\fpeval{#1\fancyqr@glitch@tear*rand()},\fpeval{.4*\fancyqr@glitch@tear*(rand()-.5)}){%
+   \fancyqr@mixcolor{.!#2}\fancyqr@glitch@shard{#3}{#4}{#5}{#6}}%
+}%
+\def\fancyqr@glitch@tile#1#2#3#4{%
+\ifcase\fancyqr@pass\or
+   \fancyqr@glitch@ghosttile-\fancyqr@glitch@ghost{#1}{#2}{#3}{#4}\or
+   \fancyqr@glitch@ghosttile+{\fpeval{round(min(100,1.8*\fancyqr@glitch@ghost))}}{#1}{#2}{#3}{#4}\else
+   \fancyqr@glitch@shard{#1}{#2}{#3}{#4}\fi
+}%
+\FancyQrSidePatterns\fancyqr@glitch@tile
+\FancyQrPasses{3}%

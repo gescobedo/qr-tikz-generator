@@ -1,7 +1,16 @@
-\documentclass[border={5pt}]{standalone}
-\usepackage{fontawesome}
+\documentclass[border={-4pt 0 0 0},convert={density=300,outext=.png}
+]{standalone}
 \usepackage{svg}
 \usepackage{fancyqr}
+% for showcase of random colors
+
+
+% to showcase scalebox
+\usepackage{graphicx}
+
 \begin{document}	
-	\fancyqr[color=black,image=\scalebox{0.21}{\includesvg{download}},size=5cm,level=H]{https://github.com/hcai-mms/}	
+
+\fancyqrset{height=8cm,level=H,color=black,image padding=0,tight}
+\fancyqr[image=\scalebox{0.21}{\includesvg{mms}}]{https://hcai.at}
+
 \end{document}

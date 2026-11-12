@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   width="303.23999"
+   height="303.23999"
+   viewBox="-0.5 -0.5 303.23999 303.23999"
+   id="svg7"
+   sodipodi:docname="download (1).svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="303.23999"
+       height="303.23999"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     id="g7"
+     transform="translate(-0.0700026,-0.23001566)">
+    <circle
+       cx="151.19"
+       cy="151.35001"
+       fill="#00478f"
+       stroke="none"
+       pointer-events="none"
+       id="ellipse1"
+       r="151.62" />
+    <rect
+       x="2.95"
+       y="130.23"
+       width="50"
+       height="18.879999"
+       fill="#ffffff"
+       stroke="none"
+       transform="rotate(90,27.95,139.67)"
+       pointer-events="none"
+       id="rect1" />
+    <path
+       d="m 23.39,149.11 v -18.88 h 52.38 v 18.88 z"
+       fill="#ffffff"
+       stroke="none"
+       transform="matrix(0.70710678,0.70710678,0.70710678,-0.70710678,-84.239958,203.37325)"
+       pointer-events="none"
+       id="path1" />
+    <path
+       d="m 37.24,116.53 2.74,-18.88 h 134.66 l -2.74,18.88 z"
+       fill="#ffffff"
+       stroke="none"
+       transform="rotate(-45,105.94,107.09)"
+       pointer-events="none"
+       id="path2" />
+    <path
+       d="M 86.91,193.07 110.2,174.2 h 117.04 l -23.29,18.87 z"
+       fill="#ffffff"
+       stroke="none"
+       transform="rotate(90,157.08,183.63)"
+       pointer-events="none"
+       id="path3" />
+    <rect
+       x="91.660004"
+       y="107.37"
+       width="130.85001"
+       height="18.879999"
+       fill="#ffffff"
+       stroke="none"
+       transform="rotate(90,157.08,116.81)"
+       pointer-events="none"
+       id="rect3" />
+    <path
+       d="m 82.2,183.21 23.09,-18.88 h 61.75 l -23.09,18.88 z"
+       fill="#ffffff"
+       stroke="none"
+       transform="rotate(90,124.62,173.77)"
+       pointer-events="none"
+       id="path4" />
+    <path
+       d="m 207.4,198 c -11.74,0.11 -22.65,-5.82 -28.59,-15.54 -5.94,-9.72 -6,-21.75 -0.16,-31.53 5.83,-9.78 16.68,-15.81 28.43,-15.81 v 15.72 c -5.88,0 -11.3,3.02 -14.22,7.91 -2.92,4.88 -2.89,10.9 0.08,15.76 2.97,4.86 8.43,7.83 14.3,7.77 z"
+       fill="#ffffff"
+       stroke="none"
+       transform="matrix(0,-1,-1,0,373.64,373.64)"
+       pointer-events="none"
+       id="path5" />
+    <path
+       d="m 253.93,198.07 c -18.04,-0.17 -32.53,-14.3 -32.44,-31.61 0.09,-17.31 14.73,-31.3 32.77,-31.3 v 15.73 c -9.02,0 -16.34,6.99 -16.39,15.65 -0.04,8.65 7.21,15.72 16.22,15.81 z"
+       fill="#ffffff"
+       stroke="none"
+       transform="matrix(0,1,1,0,87.64,-87.64)"
+       pointer-events="none"
+       id="path6" />
+    <path
+       d="m 91.75,150.5 20.73,-18.88 h 45.02 l -20.73,18.88 z"
+       fill="#ffffff"
+       stroke="none"
+       transform="matrix(0,1,1,0,-16.43,16.43)"
+       pointer-events="none"
+       id="path7" />
+    <rect
+       x="100.37"
+       y="146.91"
+       width="48.509998"
+       height="18.879999"
+       fill="#ffffff"
+       stroke="none"
+       transform="rotate(90,124.63,156.35)"
+       pointer-events="none"
+       id="rect7" />
+    <ellipse
+       cx="230.82001"
+       cy="166.7"
+       rx="7.5"
+       ry="4.5799999"
+       fill="#ffffff"
+       stroke="none"
+       pointer-events="none"
+       id="ellipse7" />
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+% style `dots': every module is a circle
+\def\fancyqr@dots@circle{\put(.5,.5){\circle*{\@ne}}}%
+\newpattern0000{\fancyqr@dots@circle}%
+\newpattern1000{\fancyqr@dots@circle}%
+\newpattern0001{\fancyqr@dots@circle}%
+\newpattern0100{\fancyqr@dots@circle}%
+\newpattern0010{\fancyqr@dots@circle}%
+\newpattern1100{\fancyqr@dots@circle}%
+\newpattern1010{\fancyqr@dots@circle}%
+\newpattern0101{\fancyqr@dots@circle}%
+\newpattern0011{\fancyqr@dots@circle}%
+\newpattern1001{\fancyqr@dots@circle}%
+\newpattern0110{\fancyqr@dots@circle}%
+\newpattern1111{\fancyqr@dots@circle}%
+\newpattern0111{\fancyqr@dots@circle}%
+\newpattern1011{\fancyqr@dots@circle}%
+\newpattern1101{\fancyqr@dots@circle}%
+\newpattern1110{\fancyqr@dots@circle}%
+\FancyQrStyleSet{finder=circle,finder thickness=.8}%
